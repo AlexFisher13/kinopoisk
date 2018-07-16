@@ -18,14 +18,13 @@ public class GreetingController {
     @Autowired
     private FilmRepo filmRepo;
 
-    //метод для tymeleaf
-//    @GetMapping("/greeting")
-//    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-//        model.addAttribute("name", name);
-//        return "greeting";
-//    }
-
-    //метод для mustache
+    /*//метод для tymeleaf
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "greeting";
+    }*/
+    /*//метод для mustache
     @GetMapping("/greeting")
     public String greeting(
             @RequestParam(name="name", required=false, defaultValue="World") String name,
@@ -33,8 +32,7 @@ public class GreetingController {
     ) {
         model.put("name", name);
         return "greeting";
-    }
-
+    }*/
     @GetMapping
     public String main(Map<String, Object> model) {
         Iterable<Film> films = filmRepo.findAll();
